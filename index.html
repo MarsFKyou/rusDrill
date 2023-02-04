@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Золотые шлягеры русского шансона</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200vh;
+      }
+      .header {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      .image {
+        margin-top: 20px;
+        animation: spin 10s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .controls {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+      button {
+        width: 100px;
+        height: 30px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Золотые шлягеры русского шансона</div>
+      <img class="image" src="https://d2w9rnfcy7mm78.cloudfront.net/20208295/original_3476aeedebc0e91fd4c54453400db2b2.png?1675526376?bc=0">
+      <div class="controls">
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+      </div>
+    </div>
+    <audio id="music">
+      <source src="https://biffhard.sunproxy.net/file/SGxDMnMxbXdvUVIvUHpva3FrZkJvek5samJWbG1aR0x5M1JDSVk1S1I0cTgvVWEybFh0aU1MdVRPZHk3MkJNNHhnSXJENEJHd1N4VDJLbjFCNnBXeG5EZWJNdkhZY0loelZsWkM3V1FPaTA9/Aleksandr_Rozenbaum_-_Cadillac_MORGENSHTERN_Eldzhej_cover_(BiffHard.TOP).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      const playBtn = document.getElementById("playBtn");
+      const pauseBtn = document.getElementById("pauseBtn");
+      const music = document.getElementById("music");
+      playBtn.addEventListener("click", function() {
+        music.play();
+      });
+      pauseBtn.addEventListener("click", function() {
+        music.pause();
+      });
+    </script>
+  </body>
+</html>
